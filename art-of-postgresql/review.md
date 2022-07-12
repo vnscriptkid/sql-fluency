@@ -2,14 +2,33 @@
 
 ## II Introduction 1
 1. Structured Query Language 2
-1.1. Some of the Code is Written in SQL 
-1.2. A First Use Case 
-1.3. Loading the Data Set 
-1.4. Application Code and SQL 
-1.5. A Word about SQL Injection 
-1.6. PostgreSQL protocol: server-side prepared statements 
-1.7. Back to Discovering SQL 
-1.8. Computing Weekly Changes 
+- DIY: 
+    - using psql, create table factbook (int, date, text, text, text), copy from factbook.csv
+    - alter table, into (int, date, bigint, bigint, bigint), normalize figures, remove ',', '$'
+- what is decorated literal, why should we use it, give an example
+- How to get data in specific month, let's say `Feb 2007`
+- How to define a variable in psql
+- Idea behind sql injection, how to prevent?
+- How to convert from num to text with template patterns, i.e. 1234567 -> $ 1,234,567 (currency + grouping)
+- How type of result is infered: date + interval = ?
+- How cocalesce works?
+- DIY
+    - list all entries in Feb, 2017
+    - order by date, format figures like 1234567 -> $ 1,234,567
+    - execute from app level, fill all missing days (day 0 0 0)
+    - execute from sql level using generate_series, left join, coalesce
+    - add one more column, showing how much diff in %, comparing to the same day last week: lag window fn, handle edge cases (null, x / 0)
+
+date        │ shares     │ trades  │ dollars
+════════════╪════════════╪═════════╪══════════════════
+2017-02-01  │ 1161001502 │ 5217859 │ $ 44,660,060,305
+2017-02-02  │ 1128144760 │ 4586343 │ $ 43,276,102,903
+2017-02-03  │ 1084735476 │ 4396485 │ $ 42,801,562,275
+2017-02-04  │          0 │       0 │ $ 0
+2017-02-05  │          0 │       0 │ $ 0
+2017-02-06  │ 954533086  │ 3817270 │ $ 37,300,908,120
+...
+
 2. Software Architecture 18
 2.1. Why PostgreSQL? 
 2.2. The PostgreSQL Documentation 
