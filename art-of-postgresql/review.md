@@ -30,39 +30,99 @@ date        │ shares     │ trades  │ dollars
 ...
 
 2. Software Architecture 18
-2.1. Why PostgreSQL? 
-2.2. The PostgreSQL Documentation 
+- Why and when postgresql? concurrent access apps, given transactions with ACID props
+    - Atomic
+    - Isolated
+    - Consistent: through constraints (PK, FK, CHECK)
+    - Durable: persistent at disk level
 3. Getting Ready to read this Book 23
 
 ## III Writing Sql Queries 25
 4. Business Logic 27
 4.1. Every SQL query embeds some business logic 
-4.2. Business Logic Applies to Use Cases 
-4.3. Correctness 
-4.4. Eஸஹ஭ciency 
-4.5. Stored Procedures — a Data Access API 
-4.6. Procedural Code and Stored Procedures 
-4.7. Where to Implement Business Logic? 
+4.2. Business Logic Applies to Use Cases
+- how to convert a number int of millies to interval type
+- display the list of albums from a given artist, each with its total duration.
+    - tables: album, artist, track
+    - order by album title
+    - shorten join condition when keys are the same
+    - impl equivalent logic in app level
+
+```js
+// abstract class, for others to inherit
+class Model { 
+    tableName = null;
+    columns = []
+    
+    // build a generic select ... from ... where
+    static buildSql()
+    // use buildSql, fetch one, build the object using specific model
+    static fetchOne()
+    // same idea fetchOne, except returns a list
+    static fetchAll()
+}
+
+class Artist {} // define tableName, columns, constructor
+class Album {}
+class Track {}
+
+function main() {
+    // fetch artist given artistId
+    // fetch all albums given that artist
+    // fetch all tracks given each album
+    // accumulate durations from tracks
+}
+```
+
+album                  │ duration
+═══════════════════════╪══════════════════════════════
+Blood Sugar Sex Magik  │ @ 1 hour 13 mins 57.073 secs
+By The Way             │ @ 1 hour 8 mins 49.951 secs
+Californication        │ @ 56 mins 25.461 secs
+
+- How many isolation levels are there in sql standard, in postgres? what are they? where it's applied? explain each briefly
+    - 4 levels in SQL, 3 in postgres
+    - makes sense in context of concurrent transactions accessing/manipulating same piece of data
+    - diagram with concrete examples
+    - good use case for repeatable reads, serializable why?
+
+- 2 pros of putting business logic on sql side , instead of app level
+    - correctness (ACID)
+    - efficiency (less network round-trips)
+
+- Write a stored procedure
+    - takes in name of artist, split out album's title and durations of all tracks
+    - tables: album, tracks, artist
+    - call it from app side
+    - refactor to takes in artistId instead
+    - from refactored version, how can we still find by name of artist 
+        - using subquery
+        - using lateral join
+    - list album with durations of artists who have exactly 4 albums
+        - use CTE
+        - use above reusable stored procedure 
+        - use lateral join
+
+- Explain lateral join technique
+    - what can be on the right side of `lateral` 
+
 5. A Small Application 41
-5.1. Readme First Driven Development 
-5.2. Loading the Dataset 
-5.3. Chinook Database 
-5.4. Music Catalog 
-5.5. Albums by Artist 
-5.6. Top-N Artists by Genre 
+
+- Show all genres and number of tracks for each genre (p44)
+- Get list of n artists with most albums
+- Given artist name, list album titles and duration of all tracks
+- List top n tracks for each genre (ranked by number of times it appears in playlists)
+    - output in form: ( genre_name, track_name, artist_name )
+    - use lateral join (nested loop) as a collerated subquery
+    - tables used: genre, track, playlisttrack, album, artist
+
 6. The SQL REPL — An Interactive Setup 52
-6.1. Intro to psql 
-6.2. The psqlrc Setup 
-6.3. Transactions and psql Behavior 
-6.4. A Reporting Tool 
-6.5. Discovering a Schema 
-6.6. Interactive Query Editor 
+
 7. SQL is Code 60
-7.1. SQL style guidelines 
-7.2. Comments 
-7.3. Unit Tests 
-7.4. Regression Tests 
-7.5. A Closer Look 
+
+- Find cases where track being named after another artist's
+    - tables used: artist*2, track, album
+
 8. Indexing Strategy 71
 8.1. Indexing for Constraints 
 8.2. Indexing for Queries 
@@ -71,7 +131,30 @@ date        │ shares     │ trades  │ dollars
 8.5. PostgreSQL Index Access Methods 
 8.6. Advanced Indexing 
 8.7. Adding Indexes 
+
+- Why saying indexing is a data modeling activity? Give 3 concrete examples?
+- 2 important aspects of indexing?
+    - constraints (ensure consistency)
+    - faster data access (than default sequencial scan)
+- Explain briefly access methods and their use cases:
+    - Btree
+    - GiST
+    - SP-GiST
+    - GIN
+    - BRIN
+    - Hash
+    - Bloom filters
+
+- Tool that helps with indexing needs analysis by listing most executed queries and execution time
+    - How to setup this? https://dangxuanduy.com/database/su-dung-pg_stat_statements-de-giam-sat-cau-lenh-tren-postgresql/
+    - How to debug a long-running query?
+    - What can tell from the diff btw estimated and actual rows count? How to decide from that? autovacuum
+
+
 9. An Interview with Yohann Gabory 81
+- ORM vs raw SQL?
+    - simple CRUD queries: ORM
+    - complex business logic: raw SQL
 
 ## IV SQL Toolbox 86
 10. Get Some Data 88
