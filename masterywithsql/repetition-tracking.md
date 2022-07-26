@@ -34,3 +34,21 @@
     - use `not null` as much as possible
 - 3.16 🚩 **24/07/22** 🍏
 - 3.17 🚩 **24/07/22** 🍏
+
+6. in, between, like
+- lecture
+    - `__A%` matches str with `A` as third char (`_` * 2)
+    - ilike: sql way for in-case-sensitive
+    - `similar to 'M%L{2}%'`
+- 3.18 🚩 **26/07/22** 🍏
+- 3.19 🚩 **26/07/22** 🍏
+- 3.20 🚩 **26/07/22** 🍏
+- 3.21 🚩 **26/07/22** 
+
+7. order by
+- lecture
+    - nulls first, nulls last
+- 3.22 🚩 **26/07/22** 🍏
+- 3.23 🚩 **26/07/22** 🍏
+- 3.24 🚩 **26/07/22** 🍏
+- 3.25 🚩 **26/07/22** 🍏
