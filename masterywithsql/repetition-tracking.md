@@ -52,3 +52,15 @@
 - 3.23 🚩 **26/07/22** 🍏
 - 3.24 🚩 **26/07/22** 🍏
 - 3.25 🚩 **26/07/22** 🍏
+
+8. order of execution
+- lecture
+    - order mnemonic: `from` the place `where` the `group` has been `order`ed and `select`ed there's a `limit`
+- 3.26 🚩 **30/07/22** 🍏
+
+9. limit and offset
+- lecture
+- 3.27 🚩 **30/07/22** 🍏
+- 3.28 🚩 **30/07/22** 🔴
+- 3.29 🚩 **30/07/22** 🍏
+- 3.30 🚩 **30/07/22** 🍏
