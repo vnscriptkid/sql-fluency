@@ -55,7 +55,7 @@
 
 8. order of execution
 - lecture
-    - order mnemonic: `from` the place `where` the `group` has been `order`ed and `select`ed there's a `limit`
+    - order mnemonic: `from` the place `where` the `group` `has` been `select`ed and `order`ed there's a `limit`
 - 3.26 🚩 **30/07/22** 🍏
 
 9. limit and offset
@@ -64,3 +64,19 @@
 - 3.28 🚩 **30/07/22** 🔴
 - 3.29 🚩 **30/07/22** 🍏
 - 3.30 🚩 **30/07/22** 🍏
+
+9. distinct
+- lecture
+    - multiple fields => distinct combinations
+- 3.31 🚩 **31/07/22** 🍏
+- 3.32 🚩 **31/07/22** 🍏
+- 3.33 🚩 **31/07/22** 🍏
+- 3.34 🚩 **31/07/22** 🍏
+
+10. case exp
+- lecture
+    - in: select, where, order by
+    - forms: search, simple
+- 3.35 🚩 **31/07/22** 🍏
+- 3.36 🚩 **31/07/22** 🍏
+- 3.37 🚩 **31/07/22** 🔴
