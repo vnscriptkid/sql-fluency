@@ -102,3 +102,31 @@
 - 4.6 🚩 **01/08/22** 🍏
 - 4.7 🚩 **01/08/22** 🍏
 - 4.8 🚩 **01/08/22** 🍏
+
+13. CASE expressions and aggregations
+- lecture
+    - sum(case when ... then 1 else then 0)
+    - sum(case when ... then 1)
+    - count(case when ... then 1 else then null)
+    - count(case when ... then 1)
+    - count(*) filter (where ...)
+- 4.9 🚩 **02/08/22** 🍏
+- 4.10 🚩 **02/08/22** 🔴
+
+14. Challenge exercises
+- 4.11 🚩 **02/08/22** 🍏
+- 4.12 🚩 **02/08/22** 🍏
+- 4.13 🚩 **02/08/22** 🔴
+- 4.14 🚩 **02/08/22** 🍏
+
+15. Character data types
+- lecture
+    - varchar vs text
+    - concat vs ||
+    - coercion
+    - coalesce
+    - trim, length + trim
+    - lower, upper, left, right
+    - substr (1-based index)
+- 5.1 🚩 **02/08/22** 🍏
+- 5.2 🚩 **02/08/22** 🍏
