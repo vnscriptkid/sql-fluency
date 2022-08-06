@@ -130,3 +130,30 @@
     - substr (1-based index)
 - 5.1 🚩 **02/08/22** 🍏
 - 5.2 🚩 **02/08/22** 🍏
+
+16. Number data types
+- lecture
+    - int2 (smallint), int4 (int), int8 (bigint)
+    - pg_typeof
+    - type coersion
+    - explicit casting (3 ways): int '10', '10'::int, cast('10' as int)
+    - count(*) returns bigint, bigint/int => bigint
+    - categoties:
+        - exact type: numeric === decimal, numeric(precision, scale) -> fixed
+        - approximate type (floating-point type): real, double precision
+- 5.3 🚩 **06/08/22** 🍏
+- 5.4 🚩 **06/08/22** 🔴
+
+17. Date and time data types
+- lecture
+    - 'YYYY-MM-DD'
+    - date - date = num of days (int)
+    - ts - ts = interval
+    - justify_hours
+    - date_part('epoch', interval)
+    - date_trunc => when grouping
+    - current_date, current_time, current_timestamp
+- 5.5 🚩 **06/08/22** 🍏
+- 5.6 🚩 **06/08/22** 🍏
+- 5.7 🚩 **06/08/22** 🍏
+- 5.8 🚩 **06/08/22** 🍏
