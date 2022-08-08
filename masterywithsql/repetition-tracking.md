@@ -177,3 +177,16 @@
 - 6.3 🚩 **07/08/22** 🔴  
 - 6.4 🚩 **07/08/22** 🍏
 - 6.5 🚩 **07/08/22** 🍏
+
+21. Outer join
+- lecture
+    - left join use cases: find posts that do not have comments, count comments of all posts
+    - `left join`, followed by `inner join`
+- 6.6 🚩 **08/08/22** 🍏
+- 6.7 🚩 **08/08/22** 🍏
+
+22. advanced join
+- lecture
+    - self-join: pair up diff combination within one column
+- 6.8 🚩 **08/08/22** 🔴
+
