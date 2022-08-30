@@ -190,3 +190,21 @@
     - self-join: pair up diff combination within one column
 - 6.8 🚩 **08/08/22** 🔴
 
+23. Challenge exercises
+- 6.9 🚩 **10/08/22** 🍏
+- 6.10 🚩 **10/08/22** 🍏
+- 6.11 🚩 **10/08/22** 🔴
+
+24. Exercises - Uncorrelated subqueries
+- 7.1 🚩 **28/08/22** 🍏
+- 7.2 🚩 **28/08/22** 🍏
+- 7.3 🚩 **28/08/22** 🔴
+
+25. Exercises - Correlated subqueries
+- 7.4 🚩 **30/08/22** 🍏
+- 7.5 🚩 **30/08/22** 🔴
+- 7.6 🚩 **30/08/22** 🔴
+
+26. Exercises - Table subqueries
+- 7.7 🚩 **30/08/22** 🍏
+- 7.8 🚩 **30/08/22** 🔴
