@@ -208,3 +208,10 @@
 26. Exercises - Table subqueries
 - 7.7 🚩 **30/08/22** 🍏
 - 7.8 🚩 **30/08/22** 🔴
+
+27. Exercises - Lateral subqueries
+- 7.9 🚩 **31/08/22** 🍏
+
+28. Exercises - Common table expressions
+- 7.10 🚩 **31/08/22** 🍏
+- 7.11 🚩 **31/08/22** 🔴
