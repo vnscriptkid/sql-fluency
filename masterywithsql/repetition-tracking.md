@@ -232,5 +232,17 @@
 
 29. Aggregate window functions
 - lect
-- 8.4 🚩 **01/09/22** 
-- 8.5 🚩 **01/09/22**
+    - agg window fn: partition, order by, window frame
+    - use cases: running total, moving avg...
+- 8.4 🚩 **02/09/22** 🍏
+- 8.5 🚩 **02/09/22** 🔴
+
+30. LAG and LEAD
+- lect
+    - lag: look backward, lead: look forward
+    - first_value, last_value (within window frame)
+
+31. Challenge exercises
+- 8.6 🚩 **02/09/22** 🔴
+- 8.7 🚩 **02/09/22** 🍏
+- 8.8 🚩 **02/09/22** 🔴
