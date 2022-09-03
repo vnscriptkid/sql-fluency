@@ -246,3 +246,24 @@
 - 8.6 🚩 **02/09/22** 🔴
 - 8.7 🚩 **02/09/22** 🍏
 - 8.8 🚩 **02/09/22** 🔴
+
+32. set theory
+- lect
+
+33. union
+- lect
+    - union: same num of cols, compatible data types
+    - union all: keep duplicates
+- 9.1 🚩 **03/09/22** 🔴
+
+34. intersect
+- lect
+- 9.2 🚩 **03/09/22** 🍏
+- 9.3 🚩 **03/09/22** 🍏
+
+35. except
+- lect
+    - except, except all
+    - no where, group by => subquery
+- 9.4 🚩 **03/09/22** 🍏
+- 9.5 🚩 **03/09/22** 🔴
