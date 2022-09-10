@@ -326,3 +326,12 @@
 - 11.12 🚩 **09/09/22** 🔴
 - 11.13 🚩 **09/09/22** 🔴
 - 11.14 🚩 **09/09/22** 🔴
+
+45. Views
+- lect
+    - use cases: extract common joins to view
+
+46. Materialized views
+- lect
+    - manual refresh
+    - pg-agent 
