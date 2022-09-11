@@ -335,3 +335,11 @@
 - lect
     - manual refresh
     - pg-agent 
+
+47. Functions with SQL
+- lect
+    - reusable piece of code allowing to pass in params
+
+48. Functions with PL/pgSQL
+- lect
+    - need more logic: if-else, loop
